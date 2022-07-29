@@ -6,7 +6,7 @@ import { FaFacebookF, FaPinterest, FaTwitter } from "react-icons/fa"
 const BlogCard = ({title, author, content, coverPhoto, datePublished, slug}) => {
     
     return (
-    <div className="card">
+    <div className="app__blogcard">
         <Link href={'/posts/'+ slug}>
             <div className="imgContainer">
                 {coverPhoto ? (
@@ -19,8 +19,8 @@ const BlogCard = ({title, author, content, coverPhoto, datePublished, slug}) => 
             <h2>{title}</h2>
 
             <div className="author">
-                <p>BY {author.name}</p>
-                <p>{datePublished}</p>
+                <h6>BY {author.name}</h6>
+                <h6>{datePublished}</h6>
             </div>
 
             <p>{content.text.substring(0, 250)}...</p>

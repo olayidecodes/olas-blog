@@ -218,12 +218,16 @@ body {
 .blog {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .blog__details {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 

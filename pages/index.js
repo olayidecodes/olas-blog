@@ -4,6 +4,7 @@ import BlogCard from '../components/BlogCard';
 import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
+import Sidebar from '../components/Sidebar';
 
 const graphcms = new GraphQLClient(
   'https://api-eu-west-2.hygraph.com/v2/cl5z9pdqb2zjg01ut4ql1d7ib/master'
@@ -60,18 +61,22 @@ export default function Home({posts}) {
         <Navbar />
         <Banner />
 
-        <section className='blogcards'>
-          {posts.map((post) => (
-            <BlogCard 
-            title = {post.title}
-            author = {post.author}
-            coverPhoto = {post.coverPhoto}
-            key={post.id}
-            datePublished = {post.datePublished}
-            slug = {post.slug}
-            content = {post.content}
-            />
-          ))}
+        <section className='cards_section'>
+          
+          <div className='blogcards'>
+            {posts.map((post) => (
+              <BlogCard 
+              title = {post.title}
+              author = {post.author}
+              coverPhoto = {post.coverPhoto}
+              key={post.id}
+              datePublished = {post.datePublished}
+              slug = {post.slug}
+              content = {post.content}
+              />
+              ))}
+          </div>
+          <Sidebar />
         </section>
 
         <Footer />

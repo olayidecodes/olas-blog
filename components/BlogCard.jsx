@@ -16,7 +16,9 @@ const BlogCard = ({title, author, content, coverPhoto, datePublished, slug}) => 
         </Link>
 
         <div className="text">
-            <h2>{title}</h2>
+            <Link href={'/posts/'+ slug}>
+                <h2>{title}</h2>
+            </Link>
 
             <div className="author">
                 <h6>BY {author.name}</h6>
